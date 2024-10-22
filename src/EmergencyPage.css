@@ -1,0 +1,162 @@
+body {
+    background-color: #f0f0f0; 
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  .emergency-container {
+    background: linear-gradient(135deg, #FF6F61, #6F86D6); 
+    padding: 40px; 
+    border-radius: 25px; 
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    animation: fadeIn 1s ease-in-out; 
+    border: 2px solid #000; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header {
+    color: #000; 
+    font-size: 3rem; 
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); 
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .contact-item {
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000; 
+    font-size: 1.3rem; 
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s; 
+    cursor: pointer; 
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .no-contacts {
+    color: #000; 
+    font-size: 1.5rem; 
+  }
+  
+  .feature-buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 20px;
+  }
+  
+  .feature-button {
+    background: linear-gradient(135deg, #6a3093, #a044ff); 
+    color: #fff; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative; 
+  }
+  
+  .feature-button .icon {
+    margin-right: 10px;
+    font-size: 1.5rem; 
+  }
+  
+  .feature-button:hover {
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .feature-button:active {
+    transform: translateY(2px); 
+  }
+  
+  .signup-link {
+    margin-top: 40px;
+    color: #000; 
+    font-size: 1.2rem; 
+  }
+  
+  .signup-link a {
+    color: #ffdfba; 
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: #000; 
+  }
+  
+  @keyframes buttonPulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); 
+    }
+    50% {
+      box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0);
+    }
+  }
+  
+  .feature-button {
+    animation: buttonPulse 2s infinite; 
+  }
+  
+  
+  .emergency-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    z-index: 0; 
+    animation: rotate 10s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
